@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: BSD-3-Clause-Clear
 
+#include <linux/etherdevice.h>
 #include "mt7615.h"
 
 static int
