@@ -753,8 +753,8 @@ mt7925_mac_write_txwi(struct mt76_dev *dev, __le32 *txwi,
 		wmm_idx = mvif->wmm_idx;
 		band_idx = mvif->band_idx;
 	} else if (vif && vif->type == NL80211_IFTYPE_MONITOR) {
-		if (dev->chandef.chan &&
-		    dev->chandef.chan->band != NL80211_BAND_2GHZ)
+		if (dev->phy.chandef.chan &&
+		    dev->phy.chandef.chan->band != NL80211_BAND_2GHZ)
 			band_idx = 1;
 	}
 
