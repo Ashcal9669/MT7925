@@ -22,6 +22,14 @@
 #include <linux/soc/mediatek/mtk_wed.h>
 #include <net/netlink.h>
 #include <net/mac80211.h>
+
+#ifndef ieee80211_txq_aql_pending
+static inline bool ieee80211_txq_aql_pending(struct ieee80211_hw *hw, struct ieee80211_txq *txq)
+{
+	return false;
+}
+#endif
+
 #if LINUX_VERSION_CODE < KERNEL_VERSION(6,6,0)
 #include <net/page_pool.h>
 #else
