@@ -15,9 +15,12 @@ The included patch `mt7925_5ghz_injection.patch` adds a fallback to the driver's
 - `mt76_source/`: Pre-patched source code for the `mt76` driver.
 
 ## Installation
-1.1 Install kernel headers: `sudo apt install raspberrypi-kernel-headers` for Raspberry Pi or any (arm64) devices,
+1.1 Install kernel headers: `sudo apt install raspberrypi-kernel-headers` for Raspberry Pi or any (arm64) devices.
+
 1.2 Install kernel headers: `sudo apt install -y linux-headers-$(uname -r) build-essential bc dkms git libelf-dev rfkill iw` for (amd64).
+
 2. Apply the patch to the `mt76` source.
+
 3. Build and install:
    ```bash
    make -j$(nproc)
